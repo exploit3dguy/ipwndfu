@@ -55,6 +55,5 @@ arm64:
 	gobjcopy -O binary -j .text bin/t8015_shellcode_arm64.o bin/t8015_shellcode_arm64.bin
 	rm bin/t8015_shellcode_arm64.o
         
-        xcrun -sdk iphoneos clang src/rmsigchecks.s -target arm64-apple-darwin -Wall -o bin/rmsigchecks.o
-        gobjcopy -O binary -j .text bin/rmsigchecks.o bin/rmsigchecks.bin
+        
         
