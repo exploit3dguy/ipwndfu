@@ -6,14 +6,23 @@ import usbexec
 DFU_ABORT = 4
 HOST2DEVICE = 0x21
 
-SIG_CHECKS = 0x1000078B4
+SIG_CHECKS_1 = 0x1000078B4
+SIG_CHECKS_2 = 0x1000078C0
+SIG_CHECK_3 = 0x1000078E4
+SIG_CHECKS_4 = 0x100007BAC
+SIG_CHECKS_5 = 0x1800888C4
 
 pwnd_device = usbexec.PwnedUSBDevice()
 device = dfu.acquire_device()
 
 # Remove sigchecks
 
-pwnd_device.write_memory(SIG_CHECKS, open('bin/rmsigchecks.bin').read())
+pwnd_device.write_memory(SIG_CHECKS_1, "\x1F\x20\x03\xD5")
+pwnd_device.write_memory(SIG_CHECKS_2, "\x1F\x20\x03\xD5")
+pwnd_device.write_memory(SIG_CHECKS_3, "\x1F\x20\x03\xD5")
+pwnd_device.write_memory(SIG_CHECKS_4, "\x1F\x20\x03\xD5")
+pwnd_device.write_memory(SIG_CHECKS_5, "\x00\x00\x00\x00")
+
 
 # Reset USB connection
 
