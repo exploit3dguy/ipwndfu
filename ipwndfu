@@ -30,7 +30,7 @@ def print_help():
     print '  --encrypt-gid=hexdata\t\tAES encrypt with GID key'
     print '  --decrypt-uid=hexdata\t\tAES decrypt with UID key'
     print '  --encrypt-uid=hexdata\t\tAES encrypt with UID key'
-    print '  --rmsigchecks\t\t\tRemove SecureROM Signature Checks (A8 and A9).'
+    print '  --rmsigchecks\t\t\tRemove SecureROM Signature Checks (A8 only).'
 
 if __name__ == '__main__':
     try:
