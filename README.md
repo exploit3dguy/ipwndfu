@@ -4,9 +4,9 @@
 
 **Read [disclaimer](#disclaimer) before using this software.*
 ## About this fork
-* A8 ipwndfu support by @a1exdandy
-* this fork is fork of @a1exdandy A8 and A9 ipwndfu which allows loading of unsigned IMG4 files on A8 devices (T7000 only for now)
-* Run  ```./ipwndfu -p --rmsigchecks``` to remove signature checks.
+* A8/A9 ipwndfu support by @a1exdandy
+* this fork is fork of @a1exdandy A8 and A9 ipwndfu which allows loading of unsigned IMG4 files on A8 devices and unpacked iBSS on A9
+* Run  ```./ipwndfu -p --rmsigchecks```.
 
 ## checkm8
 
