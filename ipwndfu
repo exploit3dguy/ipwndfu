@@ -30,7 +30,7 @@ def print_help():
     print '  --encrypt-gid=hexdata\t\tAES encrypt with GID key'
     print '  --decrypt-uid=hexdata\t\tAES decrypt with UID key'
     print '  --encrypt-uid=hexdata\t\tAES encrypt with UID key'
-    print '  --rmsigchecks\t\t\tRemove SecureROM Signature Checks (A8 only).'
+    print '  --rmsigchecks\t\t\tRemove SecureROM Signature Checks (A8)/Load unpacked iBSS (A9)'
 
 if __name__ == '__main__':
     try:
@@ -93,6 +93,10 @@ if __name__ == '__main__':
             
             if 'CPID:7000' in serial_number:
                 system('./rmsigchecks_t7000.py')
+            elif 'CPID:8000' in serial_number:
+                system('./pwn.py')
+            elif 'CPID:8003' in serial_number:
+                system('./pwn.py') 
             else:
                 print('Currently only A8 devices are compatible with --rmsigchecks option')
         if opt == '-x':
