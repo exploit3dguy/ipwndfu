@@ -98,7 +98,7 @@ if __name__ == '__main__':
             elif 'CPID:8003' in serial_number:
                 system('./pwn.py') 
             else:
-                print('Currently only A8 devices are compatible with --rmsigchecks option')
+                print('Currently only A8 and A9 devices are compatible with --rmsigchecks option')
         if opt == '-x':
             device = PwnedDFUDevice()
             if device.config.cpid != '8920':
