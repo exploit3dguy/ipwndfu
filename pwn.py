@@ -12,6 +12,10 @@ dev.write_memory_ptr(0x1800C2F58, 0x1800CEC00)
 
 dev.write_memory(0x1800CEC00, open('bin/rompatch.bin').read())
 
+# 0x1111 nonce 
+
+dev.write_memory(0x20E0B8038, "\x11\x11\x11\x11")
+dev.write_memory(0x20E0B803C, "\x11\x11\x11\x11")
 
 
 
