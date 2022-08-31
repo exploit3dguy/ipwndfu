@@ -4,6 +4,7 @@
 
 **Read [disclaimer](#disclaimer) before using this software.*
 ## About this fork
+* Fixed to work with /usr/local/bin/python instead of /usr/bin/python on newer macOS.
 * A8/A9 ipwndfu support by @a1exdandy
 * this fork is fork of @a1exdandy A8 and A9 ipwndfu which allows loading of unsigned IMG4 files on t7000, s8000 and s8003 devices.
 * Run  ```./ipwndfu -p --rmsigchecks```.
