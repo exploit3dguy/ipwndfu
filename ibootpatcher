@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python
 # ibootpatcher: patch assembly code in iBoot binaries
 # Author: axi0mX
 
