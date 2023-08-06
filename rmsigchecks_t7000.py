@@ -17,6 +17,11 @@ device = dfu.acquire_device()
 
 # Remove sigchecks
 
+# 0x1111 nonce 
+
+pwnd_device.write_memory(0x20E029038, "\x11\x11\x11\x11")
+pwnd_device.write_memory(0x20E02903C, "\x11\x11\x11\x11")
+
 pwnd_device.write_memory(SIG_CHECKS_1, "\x1F\x20\x03\xD5")
 pwnd_device.write_memory(SIG_CHECKS_2, "\x1F\x20\x03\xD5")
 pwnd_device.write_memory(SIG_CHECKS_3, "\x1F\x20\x03\xD5")
